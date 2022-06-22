@@ -1,0 +1,24 @@
+@import "./base/reset";
+@import "./src/styles/abstracts/_variables.scss";
+@import "./src/styles/abstracts/_mixins.scss";
+@import "./components/_header";
+@import "./components/_editor";
+
+body{
+  font-family: sans-serif;
+}
+
+.container {
+  padding-right: 23px;
+  padding-left: 23px;
+  width: 93%;
+  min-width: 320px;
+  max-width: 480px;
+  margin: 0 auto;
+  @media (min-width: $tablet-bp) {
+    max-width: 992px;
+  }
+  @media (min-width: $desktop-bp) {
+    max-width: 1200px;
+  }
+}
