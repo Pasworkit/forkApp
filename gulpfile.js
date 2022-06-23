@@ -18,8 +18,8 @@ const cleanDist = () => gulp.src('dist/*', {allowEmpty: true})
 
 const buildStyles = () => gulp.src('./src/styles/**/*.scss')
     .pipe(autoprefixer())
-    .pipe(concat('css.min.css'))
     .pipe(sass())
+    .pipe(concat('css.min.css'))
     .pipe(gulp.dest('./dist/css'));
 
 export const html = () => gulp.src('./src/**/*.html')
