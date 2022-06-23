@@ -3,6 +3,7 @@
 @import "./src/styles/abstracts/_mixins.scss";
 @import "./components/_header";
 @import "./components/_editor";
+@import "./components/here-is-what-you-get";
 
 body{
   font-family: sans-serif;
@@ -11,8 +12,8 @@ body{
 .container {
   padding-right: 23px;
   padding-left: 23px;
-  width: 93%;
-  min-width: 320px;
+  width: 85%;
+  min-width: 260px;
   max-width: 480px;
   margin: 0 auto;
   @media (min-width: $tablet-bp) {
