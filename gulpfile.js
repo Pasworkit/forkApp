@@ -12,11 +12,11 @@ import imagemin from 'gulp-imagemin';
 const BS = browserSync.create();
 const sass = gulpSass(dartSass);
 
-const cleanDist = () => gulp.src('dist/*', {allowEmpty: true})
+export const cleanDist = () => gulp.src('dist/*', {allowEmpty: true})
     .pipe(clean());
 
 
-const buildStyles = () => gulp.src('./src/styles/**/*.scss')
+export const buildStyles = () => gulp.src('./src/styles/**/*.scss')
     .pipe(autoprefixer())
     .pipe(sass())
     .pipe(concat('css.min.css'))
@@ -26,7 +26,7 @@ export const html = () => gulp.src('./src/**/*.html')
     .pipe(htmlMin({collapseWhitespace: true}))
     .pipe(gulp.dest('./dist'));
 
-const moveImages = () => gulp.src('./src/images/**/*')
+export const moveImages = () => gulp.src('./src/images/**/*')
     .pipe(imagemin())
     .pipe(gulp.dest('./dist/images'));
 

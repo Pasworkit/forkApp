@@ -1,28 +1,32 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Step Project Forkio</title>
     <link rel="stylesheet" href="./dist/css/css.min.css">
     <script defer src="./dist/scripts/scripts.min.js"></script>
 </head>
-
 <body>
     <header class="header">
-        <nav>
+        <nav class="header__navigation">
+            <div class="header__logo-wrapper">
             <div class="header__logo"><a href="#" class="header__logo-link"></a></div>
+            <h3 class="header__logo-text">Forkio</h3>
+            </div>
+
             <ul class="header__list">
                 <li class="header__list-item"><a href="#">Overview</a></li>
                 <li class="header__list-item"><a href="#">About Fork</a></li>
                 <li class="header__list-item"><a href="#">Buying Options</a></li>
                 <li class="header__list-item"><a href="#">Support</a></li>
             </ul>
+
             <button class="header__button"><a href="#">Buy Now</a></button>
-            <div class="header__menu-burger"><a href="#" class="menu-icon border-icon closed-icon"></a></div>
+
+            <div class="header__menu-burger"><a href="#"></a></div>
         </nav>
     </header>
 
@@ -96,9 +100,8 @@
         </div>
     </section>
 
-    <section class="here-is-what-you-get ">
-        <h4 class="here-is-what-you-get__title container">Here is what you get</Here>
-        </h4>
+    <section class="here-is-what-you-get">
+        <h4 class="here-is-what-you-get__title container">Here is what you get</h4>
         <ul class="here-is-what-you-get__wrapper container">
             <li class="here-is-what-you-get__item">
                 <div class="here-is-what-you-get__item-icon">
@@ -152,5 +155,4 @@
     </section>
 
 </body>
-
 </html>
