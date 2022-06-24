@@ -1,0 +1,93 @@
+.people-talk {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("./../images/peopleTalk/background-m.png");
+
+  @media (min-width: $tablet-bp) {
+    background-image: url("./../images/peopleTalk/background-t.png");
+  }
+  @media (min-width: $desktop-bp) {
+    background-image: url("./../images/peopleTalk/background-d.png");
+  }
+}
+
+
+.people-talk__title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  color: #FFFFFF;
+  padding-top: 57px;
+  margin-bottom: 50px;
+  @media (min-width: $tablet-bp) {
+    padding-top: 87px;
+    margin-bottom: 83px;
+    font-size: 42px;
+    line-height: 44px;
+
+  }
+  @media (min-width: $desktop-bp) {
+    padding-top: 108px;
+    margin-bottom: 75px;
+    font-size: 48px;
+    line-height: 50px;
+  }
+}
+
+.people-talk__item-wrapper{
+  display: grid;
+  row-gap: 45px;
+  margin-bottom: 37px;
+  @media (min-width: $tablet-bp) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 116px;
+    row-gap: 58px;
+    margin-bottom: 68px;
+  }
+  @media (min-width: $desktop-bp) {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 87px;
+    row-gap: 116px;
+    margin-bottom: 118px;
+  }
+}
+
+.people-talk__item {
+  text-align: center;
+
+}
+
+.people-talk__item-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  margin-bottom: 22px;
+}
+
+.people-talk__item-text {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+
+.people-talk__text {
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #A291A5;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #645766;
+  @media (min-width: $tablet-bp) {
+    max-width: 704px;
+  }
+  @media (min-width: $desktop-bp) {
+    max-width: 887px;
+
+  }
+}
