@@ -8,6 +8,6 @@ burgerBtn.addEventListener("click", (e) => {
 });
 
 window.addEventListener("click", () => {
-    burgerBtn.classList.remove('header__button-cancel');
+    burgerBtn.classList.remove('header__menu-closed');
     headerList.classList.remove('header__list-displayed')
 })
