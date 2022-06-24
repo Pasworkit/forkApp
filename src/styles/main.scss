@@ -1,8 +1,8 @@
 @import "./base/reset";
 @import "./src/styles/abstracts/_variables.scss";
 @import "./src/styles/abstracts/_mixins.scss";
-@import "./components/_header";
-@import "./components/_editor";
+@import "./components/header";
+@import "./components/editor";
 @import "./components/here-is-what-you-get";
 @import "./components/_people-talk.scss";
 
@@ -11,10 +11,8 @@ body{
 }
 
 .container {
-  padding-right: 23px;
-  padding-left: 23px;
-  width: 85%;
-  min-width: 260px;
+  width: 100%;
+  min-width: 290px;
   max-width: 480px;
   margin: 0 auto;
   @media (min-width: $tablet-bp) {

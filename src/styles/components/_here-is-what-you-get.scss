@@ -2,6 +2,25 @@
 @import "./src/styles/abstracts/_mixins.scss";
 
 
+.here-is-what-you-get {
+    padding-top: 32px;
+
+    @media (min-width: $tablet-bp) {
+        padding-top: 61px;
+    }
+    @media (min-width: $desktop-bp) {
+        padding-top: 94px;
+        display: grid;
+        width: 100%;
+        grid-template-areas:  "item title"
+                              "item  image";
+        grid-template-rows: 46px 1fr;
+        grid-template-columns: 1fr 1fr;
+        background: #F4F4F4;
+        
+    }
+}
+
 .here-is-what-you-get__title {
     margin-bottom: 36px;
     padding-top: 50px;
@@ -10,22 +29,44 @@
     line-height: 38px;
     text-align: center;
     color: #8D81AC;
+    grid-area: title;
+
+    &::before {
+        content: "<";
+    }
+    &::after {
+        content: ">";
+    }
+    @media (min-width: $tablet-bp) {
+        font-size: 42px;
+        line-height: 44px;
+    }
+    @media (min-width: $desktop-bp) {
+        padding-top: 0;
+    }
+}
+
+.here-is-what-you-get__wrapper {
+    grid-area: item;
 }
 
 .here-is-what-you-get__item {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    padding: 0 23px;
+    display: grid;
+    grid-template-columns: 1fr;
     align-items: center;
+    justify-items: center;
     
     
     @media (min-width: $tablet-bp) {
-        flex-direction: row;
-        justify-content: flex-start;
-      }
+        padding-left: 30px;
+        grid-template-columns: 115px 4fr;
+        grid-column-gap: 23px;
+    }
     @media (min-width: $desktop-bp) {
-        
-      }
+        padding-left: 90px;
+    }
+   
 }
 
 .here-is-what-you-get__item-icon {
@@ -34,10 +75,7 @@
     align-items: center;
     width: 115px;
     height: 85px;
-    margin-bottom: 27px;
-    margin-right: 10px;
-
-    
+    margin-bottom: 27px;    
 }
 
 
@@ -67,17 +105,15 @@
 }
 
 .here-is-what-you-get__image {
+    grid-area: image;
     padding-bottom: 6px;
-    width: 100%;
-    background-image: url("../images/hereIsWhatYouGet/image_HereIsWhatYouGet_mobile.png");
     height: 381px;
+    background-image: url("../images/hereIsWhatYouGet/image_HereIsWhatYouGet_mobile.png");
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 
     @media (min-width: $tablet-bp) {
-        margin-left: 68px;
         height: 519px;
+        margin-left: 45px;
         background-image: url("../images/hereIsWhatYouGet/image_HereIsWhatYouGet_tablet.png");
       }
 }
