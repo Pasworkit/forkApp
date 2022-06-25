@@ -1,7 +1,20 @@
 @import "./src/styles/abstracts/_variables.scss";
 @import "./src/styles/abstracts/_mixins.scss";
 
+.editor {
+    padding-left: 18px;
+    padding-right: 26px;
 
+    @media (min-width: $tablet-bp) {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    
+    @media (min-width: $desktop-bp) {
+        padding-left: 150px;
+        padding-right: 190px;
+    }
+}
 
 .editor__title {
     margin-top: 80px;
@@ -33,7 +46,7 @@
     font-size: 14px;
     line-height: 20px;
     text-align: center;
-    color: #323232;
+    color: $color-text;
 
     @media (min-width: $tablet-bp) {
         margin-bottom: 24px;
@@ -60,7 +73,7 @@
     position: relative;
     width: max-content;
     display: flex;
-    border: 1px solid #323232;
+    border: 1px solid $color-text;
     border-radius: 3px;
 }
 
@@ -72,13 +85,13 @@
         margin-left: 3px;
         font-size: 14px;
         line-height: 14px;
-        color: #323232;
+        color: $color-text;
     }
 }
 
 .editor__amount-wrapper {
     margin-right: 20px;
-    border-right: 1px solid #323232;
+    border-right: 1px solid $color-text;
 }
 
 .editor__amount {
@@ -89,7 +102,7 @@
     margin: 3px;
     font-size: 14px;
     line-height: 14px;
-    color: #323232;
+    color: $color-text;
 }
 
 .dropdown-caret {

@@ -8,16 +8,22 @@
     @media (min-width: $tablet-bp) {
         padding-top: 61px;
     }
+
     @media (min-width: $desktop-bp) {
+        padding-bottom: 33px;
         padding-top: 94px;
-        display: grid;
         width: 100%;
-        grid-template-areas:  "item title"
-                              "item  image";
+        background: #F4F4F4;
+    }
+}
+
+.here-is-what-you-get__grid {
+    @media (min-width: $desktop-bp) {
+        display: grid;
+        grid-template-areas: "item title"
+            "item  image";
         grid-template-rows: 46px 1fr;
         grid-template-columns: 1fr 1fr;
-        background: #F4F4F4;
-        
     }
 }
 
@@ -34,13 +40,16 @@
     &::before {
         content: "<";
     }
+
     &::after {
         content: ">";
     }
+
     @media (min-width: $tablet-bp) {
         font-size: 42px;
         line-height: 44px;
     }
+
     @media (min-width: $desktop-bp) {
         padding-top: 0;
     }
@@ -56,17 +65,17 @@
     grid-template-columns: 1fr;
     align-items: center;
     justify-items: center;
-    
-    
+
     @media (min-width: $tablet-bp) {
         padding-left: 30px;
         grid-template-columns: 115px 4fr;
         grid-column-gap: 23px;
     }
+
     @media (min-width: $desktop-bp) {
         padding-left: 90px;
+        padding-right: 0;
     }
-   
 }
 
 .here-is-what-you-get__item-icon {
@@ -75,9 +84,8 @@
     align-items: center;
     width: 115px;
     height: 85px;
-    margin-bottom: 27px;    
+    margin-bottom: 27px;
 }
-
 
 .here-is-what-you-get__item-title {
     margin-bottom: 14px;
@@ -90,7 +98,6 @@
         text-align: left;
     }
 }
-
 
 .here-is-what-you-get__item-text {
     margin-bottom: 38px;
@@ -108,12 +115,12 @@
     grid-area: image;
     padding-bottom: 6px;
     height: 381px;
-    background-image: url("../images/hereIsWhatYouGet/image_HereIsWhatYouGet_mobile.png");
+    background: url(../images/hereIsWhatYouGet/image_HereIsWhatYouGet_mobile.png) no-repeat right center;
     background-repeat: no-repeat;
 
     @media (min-width: $tablet-bp) {
         height: 519px;
         margin-left: 45px;
-        background-image: url("../images/hereIsWhatYouGet/image_HereIsWhatYouGet_tablet.png");
-      }
+        background: url(../images/hereIsWhatYouGet/image_HereIsWhatYouGet_tablet.png) no-repeat right center;
+    }
 }
