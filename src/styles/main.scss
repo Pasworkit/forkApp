@@ -8,8 +8,7 @@
 @import "./components/fork-subscription-pricing";
 
 body{
-  font-family: 'Montserrat';
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .container {
@@ -22,5 +21,7 @@ body{
   }
   @media (min-width: $desktop-bp) {
     max-width: 1200px;
+    position: relative;
+    z-index: 1;
   }
 }
