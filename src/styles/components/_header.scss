@@ -1,4 +1,4 @@
-@import "./src/styles/abstracts/_variables.scss";
+@import "../../styles/abstracts/_variables.scss";
 
 .header {
   width: 100%;
@@ -37,6 +37,18 @@
   }
   @media (min-width: $desktop-bp) {
     margin-left: 31px;
+    &:hover {
+
+
+      h3{
+        color: white;
+      }
+      div {
+        width: 43px;
+        height: 42px;
+        background-image: url("../images/header/logo-hover.png");
+      }
+    }
   }
 }
 
@@ -115,21 +127,25 @@
 
     & a {
       padding: 0;
-
+    }
+    & a:hover {
+      color: #FFFFFF;
     }
   }
 }
 
+
 .header__button {
+  text-align: center;
   max-width: 119px;
   background: #8D81AC;
   border-radius: 40px;
   margin-top: 34px;
   margin-bottom: 32px;
-  padding: 11px 25px;
   border: none;
 
   & a {
+    display: block;
     font-weight: 700;
     font-size: 15px;
     line-height: 15px;
@@ -140,14 +156,18 @@
     grid-area: button;
     justify-content: end;
     min-width: 145px;
-    height: max-content;
-    padding: 11px 40px;
-    margin-right: 20px;
     margin-top: 24px;
   }
   @media (min-width: $desktop-bp) {
     margin-right: 31px;
     margin-top: 31px;
+    &:hover {
+      background: white;
+
+      a {
+        color: #8D81AC;
+      }
+    }
   }
 }
 
@@ -189,6 +209,8 @@
     background-image: url("./../images/header/top-t.png");
   }
   @media (min-width: $desktop-bp) {
+    position: relative;
+    z-index: 1;
     height: 800px;
     background-image: url("./../images/header/top-d.png");
   }
@@ -266,6 +288,14 @@
     line-height: 20px;
     color: #FFFFFF;
   }
+
+  &:hover {
+    background: #FFFFFF;
+
+    a {
+      color: #8D81AC;
+    }
+  }
 }
 
 .top-img__button-after-text {
@@ -273,5 +303,6 @@
   font-size: 14px;
   line-height: 14px;
   color: #848E97;
+
 }
 

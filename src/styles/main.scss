@@ -21,7 +21,5 @@ body{
   }
   @media (min-width: $desktop-bp) {
     max-width: 1200px;
-    position: relative;
-    z-index: 1;
   }
 }
