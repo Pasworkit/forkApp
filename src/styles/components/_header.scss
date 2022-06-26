@@ -1,15 +1,10 @@
-@import "./src/styles/abstracts/_variables.scss";
+@import "../../styles/abstracts/_variables.scss";
 
 .header {
   width: 100%;
   background: #27262A;
-
-  @media (min-width: $tablet-bp) {
-
-  }
   @media (min-width: $desktop-bp) {
     background: none;
-    position: absolute;
   }
 }
 
@@ -18,10 +13,18 @@
   justify-content: space-around;
   align-items: center;
   @media (min-width: $tablet-bp) {
-    justify-content: space-between;
+    display: grid;
+    grid-template-areas: "logo . . . . button"
+                          "list list list list list list";
+    grid-template-columns: 200px repeat(4, 1fr) 165px;
+    grid-template-rows: auto;
   }
   @media (min-width: $desktop-bp) {
-
+    position: absolute;
+    z-index: 2;
+    grid-template-areas: "logo . list button";
+    grid-template-columns: 180px  100px auto 176px;
+    grid-template-rows: auto;
   }
 }
 
@@ -29,9 +32,23 @@
   display: flex;
   align-items: center;
   @media (min-width: $tablet-bp) {
+    grid-area: logo;
     margin-left: 20px;
-    margin-top: 22px;
-    margin-bottom: 63px;
+  }
+  @media (min-width: $desktop-bp) {
+    margin-left: 31px;
+    &:hover {
+
+
+      h3{
+        color: white;
+      }
+      div {
+        width: 43px;
+        height: 42px;
+        background-image: url("../images/header/logo-hover.png");
+      }
+    }
   }
 }
 
@@ -40,10 +57,8 @@
   height: 42px;
   background-image: url("../images/header/logo.png");
   @media (min-width: $tablet-bp) {
-
   }
   @media (min-width: $desktop-bp) {
-
   }
 }
 
@@ -66,23 +81,17 @@
   top: 104px;
 
   @media (min-width: $tablet-bp) {
-    display: flex;
     background: none;
     position: static;
-    margin-right: 50px;
-    margin-top: 85px;
-
+    grid-area: list;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   @media (min-width: $desktop-bp) {
-
-  }
-}
-
-
-.header__list-displayed {
-  display: block;
-  @media (min-width: $tablet-bp) {
-    display: flex;
+    gap: 43px;
+    margin-right: 80px;
+    margin-left: 31px;
   }
 }
 
@@ -101,42 +110,64 @@
   @media (min-width: $tablet-bp) {
     border-bottom: none;
     padding: 0;
-    margin-right: 50px;
+    margin-right: 42px;
+    margin-bottom: 18px;
 
     & a {
       font-weight: 700;
       font-size: 16px;
       line-height: 18px;
       color: #8D81AC;
+      padding: 0 5px;
     }
   }
+  @media (min-width: $desktop-bp) {
+    margin-right: 0;
+    margin-bottom: 0;
 
+    & a {
+      padding: 0;
+    }
+    & a:hover {
+      color: #FFFFFF;
+    }
+  }
 }
 
+
 .header__button {
+  text-align: center;
+  max-width: 119px;
   background: #8D81AC;
   border-radius: 40px;
   margin-top: 34px;
   margin-bottom: 32px;
-  padding: 11px 25px;
   border: none;
 
   & a {
+    display: block;
     font-weight: 700;
     font-size: 15px;
     line-height: 15px;
     color: #FFFFFF;
   }
+
   @media (min-width: $tablet-bp) {
-    width: 145px;
-    height: max-content;
-    padding: 11px 40px;
-    margin-right: 20px;
+    grid-area: button;
+    justify-content: end;
+    min-width: 145px;
     margin-top: 24px;
-    margin-bottom: 56px;
   }
   @media (min-width: $desktop-bp) {
+    margin-right: 31px;
+    margin-top: 31px;
+    &:hover {
+      background: white;
 
+      a {
+        color: #8D81AC;
+      }
+    }
   }
 }
 
@@ -146,12 +177,17 @@
   width: 26px;
   background-image: url("../images/header/burger.png");
 
-
   @media (min-width: $tablet-bp) {
     display: none;
   }
 }
 
+.header__list-displayed {
+  display: block;
+  @media (min-width: $tablet-bp) {
+    display: flex;
+  }
+}
 
 .header__menu-closed {
   text-align: center;
@@ -173,6 +209,8 @@
     background-image: url("./../images/header/top-t.png");
   }
   @media (min-width: $desktop-bp) {
+    position: relative;
+    z-index: 1;
     height: 800px;
     background-image: url("./../images/header/top-d.png");
   }
@@ -235,25 +273,36 @@
   }
 }
 
-.top-img__button-wrapper{
-text-align: center;
+.top-img__button-wrapper {
+  text-align: center;
 }
-.top-img__button{
+
+.top-img__button {
   background: #8D81AC;
   border-radius: 40px;
   margin-bottom: 13px;
-  & a{
+
+  & a {
     font-weight: 700;
     font-size: 18px;
     line-height: 20px;
     color: #FFFFFF;
   }
+
+  &:hover {
+    background: #FFFFFF;
+
+    a {
+      color: #8D81AC;
+    }
+  }
 }
 
-.top-img__button-after-text{
+.top-img__button-after-text {
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
   color: #848E97;
+
 }
 
