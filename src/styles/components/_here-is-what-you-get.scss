@@ -21,7 +21,7 @@
     @media (min-width: $desktop-bp) {
         display: grid;
         grid-template-areas: "item title"
-            "item  image";
+                             "item  image";
         grid-template-rows: 46px 1fr;
         grid-template-columns: 1fr 1fr;
     }
@@ -34,7 +34,7 @@
     font-size: 32px;
     line-height: 38px;
     text-align: center;
-    color: #8D81AC;
+    color: $accent-color;
     grid-area: title;
 
     &::before {
