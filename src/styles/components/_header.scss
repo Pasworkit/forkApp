@@ -25,13 +25,12 @@
     grid-template-rows: 46px 50px;
   }
   @media (min-width: $desktop-bp) {
+    display: flex;
     padding:0;
     position: absolute;
     z-index: 2;
     margin: 0;
-    grid-template-areas: "logo . list button";
-    grid-template-columns: 180px 80px 527px 176px;
-    grid-template-rows: 73px;
+
   }
 }
 
@@ -42,6 +41,7 @@
     grid-area: logo;
   }
   @media (min-width: $desktop-bp) {
+    margin-right: 120px;
     &:hover {
       h3 {
         color: white;
