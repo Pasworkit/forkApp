@@ -29,9 +29,8 @@
     position: absolute;
     z-index: 2;
     margin: 0;
-    width: 100%;
     grid-template-areas: "logo . list button";
-    grid-template-columns: 180px auto 527px 176px;
+    grid-template-columns: 180px 80px 527px 176px;
     grid-template-rows: 73px;
   }
 }
@@ -132,12 +131,27 @@
   @media (min-width: $tablet-bp) {
     border-bottom: none;
     padding: 0;
-    width: max-content;
+    a:active,
+    a:focus {
+      color: #8D81AC;
+
+      &::after {
+        content: unset;
+        position: unset;
+        border-left: unset;
+        top: unset;
+        left: unset;
+        height: unset;
+        margin-top: unset;
+        margin-bottom: unset;
+      }
+    }
+
+
 
 
     & a {
       gap: 42px;
-      pointer-events: none;
       font-weight: 700;
       font-size: 16px;
       line-height: 18px;
@@ -148,6 +162,7 @@
   @media (min-width: $desktop-bp) {
     margin-right: 0;
     margin-bottom: 0;
+    pointer-events: auto;
 
     a{
       line-height: 17px;
