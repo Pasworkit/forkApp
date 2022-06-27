@@ -244,6 +244,7 @@
 
 
 .top-img {
+  position: relative;
   height: 614px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -307,7 +308,6 @@
   line-height: 14px;
   text-transform: uppercase;
   color: #848E97;
-  margin-bottom: 394px;
   @media (min-width: $tablet-bp) {
     font-size: 14px;
     line-height: 14px;
@@ -316,13 +316,22 @@
   @media (min-width: $desktop-bp) {
     font-size: 16px;
     line-height: 16px;
-    margin-bottom: 429px;
-
   }
 }
 
 .top-img__button-wrapper {
+  position: absolute;
+  top: 96%;
+  left: 11%;
   text-align: center;
+  @media (min-width: $tablet-bp) {
+    top: 94%;
+    left: 24%;
+  }
+  @media (min-width: $desktop-bp) {
+    top: 95%;
+    left: 30%;
+  }
 }
 
 .top-img__button {
