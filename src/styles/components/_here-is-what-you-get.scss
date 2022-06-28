@@ -44,7 +44,7 @@
     }
 
     @media (min-width: $tablet-bp) {
-        @include font(700, 42, 44);
+        @include font(700, 40, 40);
     }
 
     @media (min-width: $desktop-bp) {
