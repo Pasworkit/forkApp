@@ -12,25 +12,25 @@ import imagemin from 'gulp-imagemin';
 const BS = browserSync.create();
 const sass = gulpSass(dartSass);
 
-export const cleanDist = () => gulp.src('dist/*', {allowEmpty: true})
+const cleanDist = () => gulp.src('dist/*', {allowEmpty: true})
     .pipe(clean());
 
 
-export const buildStyles = () => gulp.src('./src/styles/**/*.scss')
+const buildStyles = () => gulp.src('./src/styles/**/*.scss')
     .pipe(autoprefixer())
     .pipe(sass())
     .pipe(concat('css.min.css'))
     .pipe(gulp.dest('./dist/css'));
 
-export const html = () => gulp.src('./**/*.html')
+const html = () => gulp.src('./**/*.html')
     .pipe(htmlMin({collapseWhitespace: true}))
     .pipe(gulp.dest('./dist'));
 
-export const moveImages = () => gulp.src('./src/images/**/*')
+const moveImages = () => gulp.src('./src/images/**/*')
     .pipe(imagemin())
     .pipe(gulp.dest('./dist/images'));
 
-export const js = () => gulp.src('./src/scripts/*.js')
+const js = () => gulp.src('./src/scripts/*.js')
     .pipe(concat('scripts.min.js'))
     .pipe(terser())
     .pipe(gulp.dest('./dist/scripts'));
@@ -42,7 +42,7 @@ export const build = gulp.series(cleanDist, moveImages, buildStyles, gulp.parall
 export const dev = gulp.series( build, () => {
     BS.init({
         server: {
-            baseDir: "./"
+            baseDir: "./dist/"
         }
     });
 
