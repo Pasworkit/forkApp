@@ -1,0 +1,142 @@
+@import "./src/styles/abstracts/_variables.scss";
+@import "./src/styles/abstracts/_mixins.scss";
+
+.fork-subscription-pricing {
+    width: 100%;
+    background-image: url("../images/forkSubscriptionPricing/backgroundPricing.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.fork-subscription-pricing__title {
+    @include font(700, 28, 42);
+    padding: 14px 15px 0;
+    margin-bottom: 32px;
+    text-align: center;
+    color: $color-light;
+
+    @media (min-width: $tablet-bp) {
+        padding-top: 88px;
+        margin-bottom: 39px;
+        @include font(700, 42, 44);
+    }
+
+    @media (min-width: $desktop-bp) {
+        @include font(700, 48, 50);
+        padding-top: 112px;
+        margin-bottom: 61px;
+    }
+
+}
+
+.fork-subscription-pricing__wrapper {
+    padding-bottom: 95px;
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fill, 298px);
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    row-gap: 18px;
+}
+
+.fork-subscription-pricing__item {
+    background: rgba(255, 255, 255, 0.11);
+    width: 257px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 457px;
+    &-large {
+        width: 298px;
+        height: 560px;
+        background: rgba(70,48,72, 0.84);
+    }
+}
+
+.fork-subscription-pricing__item-title {
+    @include font(400, 24, 24);
+    width: 257px;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    background: rgba(255, 255, 255, 0.06);
+    text-transform: uppercase;
+    text-align: center;
+    color: $color-light;
+    &-large {
+        width: 298px; 
+        background: rgba(0, 0, 0, 0.11); 
+        padding-top: 43px;
+        padding-bottom: 43px;
+    }
+}
+
+
+
+.fork-subscription-pricing__item-price {
+    @include font(400, 60, 62);
+    padding-top: 30px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: $color-light;
+
+    &-large {
+        @include font(400, 82, 90);
+        padding-top: 14px;
+        margin-bottom: 16px;
+    }
+}
+
+.fork-subscription-pricing__item-period {
+    @include font(400, 14, 16);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 36px;
+    text-transform: uppercase;
+    color: $color-light;
+
+    &-large {
+        margin-bottom: 46px;
+    }
+
+    &::after {
+        margin-top: 38px;
+        display: block;
+        content: '';
+        width: 60px;
+        height: 5px;
+        background: $accent-color;
+    }
+}
+
+.fork-subscription-pricing__item-license {
+    @include font(400, 16, 18);
+    color: $color-light;
+}
+
+.fork-subscription-pricing__item-support {
+    @include font(400, 16, 18);
+    margin-bottom: 37px;
+    color: $color-light;
+
+    &-large {
+        margin-bottom: 83px;
+    }
+
+}
+
+.fork-subscription-pricing__item-btn{
+    @include font(400, 15, 15);
+    padding: 19px 48px;
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: $color-light;
+    cursor: pointer;
+}
+
+

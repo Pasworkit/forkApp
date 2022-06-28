@@ -1,0 +1,12 @@
+
+@mixin font($fontWeightValue, $fontSizeValue, $lineHeightValue){
+  font-weight: $fontWeightValue;
+  font-size: $fontSizeValue+px;
+  line-height: $lineHeightValue+px;
+}
+
+@mixin flexCentre{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

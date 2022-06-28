@@ -1,0 +1,25 @@
+@import "./base/reset";
+@import "./src/styles/abstracts/_variables.scss";
+@import "./src/styles/abstracts/_mixins.scss";
+@import "./components/header";
+@import "./components/editor";
+@import "./components/here-is-what-you-get";
+@import "./components/_people-talk.scss";
+@import "./components/fork-subscription-pricing";
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-width: 290px;
+  max-width: 480px;
+  margin: 0 auto;
+  @media (min-width: $tablet-bp) {
+    max-width: 992px;
+  }
+  @media (min-width: $desktop-bp) {
+    max-width: 1200px;
+  }
+}

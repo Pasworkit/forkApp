@@ -1,0 +1,356 @@
+@import "../../styles/abstracts/_variables.scss";
+@import "../../styles/abstracts/_mixins.scss";
+
+
+.header {
+  width: 100%;
+  background: #27262A;
+  @media (min-width: $desktop-bp) {
+    background: none;
+  }
+}
+
+.header__relative {
+  position: relative;
+}
+
+.header__navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 30px;
+
+  @media (min-width: $tablet-bp) {
+    padding: 22px 0 0;
+    display: grid;
+    grid-template-areas: "logo . . . . button"
+                          "list list list list list list";
+    grid-template-columns: 200px repeat(4, 1fr) 165px;
+    grid-template-rows: 46px 50px;
+  }
+
+  @media (min-width: $desktop-bp) {
+    display: flex;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    margin: 20px 0 0;
+  }
+}
+
+.header__logo-wrapper {
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $tablet-bp) {
+    grid-area: logo;
+    margin-left: 20px;
+  }
+
+  @media (min-width: $desktop-bp) {
+    margin-right: 49px;
+
+    &:hover {
+
+      h3 {
+        color: white;
+      }
+
+      div {
+        width: 43px;
+        height: 42px;
+        background-image: url("../images/header/logo-hover.png");
+      }
+    }
+  }
+}
+
+.header__logo {
+  width: 43px;
+  height: 42px;
+  background-image: url("../images/header/logo.png");
+}
+
+.header__logo-text {
+  display: none;
+
+  @media (min-width: $tablet-bp) {
+    display: block;
+    @include font(700, 24, 16);
+    margin-left: 17px;
+    color: $accent-color;
+  }
+}
+
+.header__list {
+  display: none;
+  background: #333333;
+  position: absolute;
+  top: 99.5%;
+  z-index: 1;
+
+  @media (min-width: $tablet-bp) {
+    @include flexCentre;
+    background: none;
+    position: static;
+    grid-area: list;
+    gap: 3%;
+  }
+
+  @media (min-width: $desktop-bp) {
+    gap: 43px;
+    margin-left: 31px;
+  }
+}
+
+.header__list-item {
+  position: relative;
+  border-bottom: 3px solid #3B3B3B;
+  margin-bottom: 3px;
+
+  a {
+    @include font(400, 26, 26);
+    display: block;
+    padding: 29px 50px 29px 35px;
+    color: $color-light;
+  }
+
+  a:active,
+  a:focus {
+    color: $accent-color;
+
+    &::after {
+      content: "";
+      position: absolute;
+      border-left: 8px solid $accent-color;
+      top: 20%;
+      left: 0;
+      height: 63%;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+
+  @media (min-width: $tablet-bp) {
+    border-bottom: none;
+    padding: 0;
+
+    a {
+      @include font(700, 16, 18);
+      color: $accent-color;
+      padding: 0;
+    }
+
+    a:active,
+    a:focus {
+      color: $accent-color;
+
+      &::after {
+        content: unset;
+        position: unset;
+        border-left: unset;
+        top: unset;
+        left: unset;
+        height: unset;
+        margin-top: unset;
+        margin-bottom: unset;
+      }
+    }
+
+
+  }
+
+  @media (min-width: $desktop-bp) {
+    margin-right: 0;
+    margin-bottom: 0;
+    pointer-events: auto;
+
+    a {
+      @include font(700, 16, 17);
+    }
+
+    & a {
+      padding: 0;
+    }
+
+    & a:hover {
+      color: $color-light;
+    }
+  }
+}
+
+.header__button {
+  text-align: center;
+  max-width: 119px;
+  background: $accent-color;
+  border-radius: 40px;
+  border: none;
+
+  & a {
+    display: block;
+    @include font(700, 15, 15);
+    color: $color-light;
+    padding: 11px 10px;
+  }
+
+  @media (min-width: $tablet-bp) {
+    grid-area: button;
+    justify-content: end;
+    min-width: 145px;
+
+    a {
+      padding: 11px 10px;
+    }
+  }
+
+  @media (min-width: $desktop-bp) {
+    &:hover {
+      background: white;
+
+      a {
+        color: $accent-color;
+      }
+    }
+  }
+}
+
+.header__menu-burger {
+  text-align: center;
+  height: 21px;
+  width: 26px;
+  background-image: url("../images/header/burger.png");
+
+  @media (min-width: $tablet-bp) {
+    display: none;
+  }
+}
+
+.header__list-displayed {
+  display: block;
+
+  @media (min-width: $tablet-bp) {
+    display: flex;
+  }
+}
+
+.header__menu-closed {
+  text-align: center;
+  height: 25px;
+  width: 25px;
+  background-image: url("../images/header/burger-closed.png");
+}
+
+.top-img {
+  height: 614px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("./../images/header/top-m.png");
+
+  @media (min-width: $tablet-bp) {
+    height: 680px;
+    background-image: url("./../images/header/top-t.png");
+  }
+
+  @media (min-width: $desktop-bp) {
+    z-index: 1;
+    height: 800px;
+    background-image: url("./../images/header/top-d.png");
+  }
+}
+
+
+.top-img__title {
+  text-align: center;
+  @include font(700, 48, 48);
+  color: $color-light;
+  padding-top: 50px;
+  margin-bottom: 19px;
+
+  @media (min-width: $tablet-bp) {
+    @include font(700, 72, 72);
+    padding-top: 69px;
+  }
+
+  @media (min-width: $desktop-bp) {
+    @include font(700, 82, 82);
+    padding-top: 183px;
+  }
+}
+
+.top-img__wrapper {
+  height: 95%;
+}
+
+.top-img__post-title {
+  @include font(400, 18, 24);
+  text-align: center;
+  color: $accent-color;
+  margin-bottom: 14px;
+  @media (min-width: $tablet-bp) {
+    @include font(400, 24, 24);
+    margin-bottom: 19px;
+  }
+  @media (min-width: $desktop-bp) {
+    @include font(400, 30, 30);
+  }
+}
+
+.top-img__text {
+  text-align: center;
+  @include font(400, 14, 14);
+  text-transform: uppercase;
+  color: $accent-secondary;
+  @media (min-width: $desktop-bp) {
+    @include font(400, 16, 16);
+  }
+}
+
+.top-img__button-wrapper {
+  text-align: center;
+}
+
+.top-img__button {
+  background: $accent-color;
+  border-radius: 40px;
+  margin-bottom: 13px;
+
+  & a {
+    display: block;
+    @include font(700, 18, 20);
+    color: $color-light;
+    padding: 13px 29px;
+  }
+
+  @media (min-width: $tablet-bp) {
+    a {
+      @include font(700, 21, 23);
+      padding: 23px 61px;
+    }
+  }
+  @media (min-width: $desktop-bp) {
+    &:hover {
+      background: $color-light;
+
+      a {
+        color: $accent-color;
+      }
+    }
+  }
+}
+
+
+.top-img__button-after-text {
+  @include font(400, 14, 14);
+  color: $accent-secondary;
+  @media (min-width: $tablet-bp) {
+    @include font(400, 14, 16);
+  }
+  @media (min-width: $desktop-bp) {
+    @include font(400, 14, 15);
+  }
+}
+

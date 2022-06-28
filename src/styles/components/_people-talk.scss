@@ -1,0 +1,96 @@
+@import "../../styles/abstracts/_variables.scss";
+@import "../../styles/abstracts/_mixins.scss";
+
+.people-talk {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("./../images/peopleTalk/background-m.png");
+
+  @media (min-width: $tablet-bp) {
+    background-image: url("./../images/peopleTalk/background-t.png");
+  }
+}
+
+
+.people-talk__title {
+  @include font(700, 36, 48);
+  text-align: center;
+  color: $color-light;
+  padding-top: 57px;
+  margin-bottom: 50px;
+  @media (min-width: $tablet-bp) {
+    @include font(700, 42, 44);
+    padding-top: 87px;
+    margin-bottom: 83px;
+  }
+  @media (min-width: $desktop-bp) {
+    @include font(700, 48, 50);
+    padding-top: 108px;
+    margin-bottom: 75px;
+  }
+}
+
+.people-talk__item-wrapper{
+  display: grid;
+  row-gap: 45px;
+  margin-bottom: 37px;
+  @media (min-width: $tablet-bp) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 65px;
+    row-gap: 58px;
+    margin-bottom: 68px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  @media (min-width: $desktop-bp) {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 87px;
+    row-gap: 90px;
+    margin-bottom: 118px;
+  }
+}
+
+.people-talk__item {
+  text-align: center;
+
+}
+
+.people-talk__item-img {
+  @include flexCentre;
+  height: 64px;
+  margin-bottom: 22px;
+}
+
+.people-talk__item-text {
+  @include font(700, 16, 24);
+  color: $color-light;
+}
+
+.people-talk__text {
+  @include font(400, 14, 21);
+  text-align: center;
+  margin: 0 auto;
+  color: #A291A5;
+  padding-bottom: 20px;
+  @media (min-width: $tablet-bp) {
+    max-width: 704px;
+  }
+  @media (min-width: $desktop-bp) {
+    max-width: 887px;
+  }
+}
+.people-talk__line{
+  max-width: 245px;
+  margin: 0 auto;
+  border: none;
+  height: 2px;
+  background: #645766;
+
+  @media (min-width: $tablet-bp) {
+    max-width: 555px;
+  }
+  @media (min-width: $desktop-bp) {
+    max-width: 880px;
+  }
+}
