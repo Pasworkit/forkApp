@@ -14,10 +14,9 @@
   align-items: center;
   padding-top: 32px;
   padding-bottom: 30px;
+
   @media (min-width: $tablet-bp) {
     padding: 22px 0 0;
-    margin-left: 20px;
-    margin-right: 20px;
     display: grid;
     grid-template-areas: "logo . . . . button"
                           "list list list list list list";
@@ -29,7 +28,7 @@
     padding:0;
     position: absolute;
     z-index: 2;
-    margin: 0;
+    margin: 20px 0 0;
 
   }
 }
@@ -39,6 +38,7 @@
   align-items: center;
   @media (min-width: $tablet-bp) {
     grid-area: logo;
+    margin-left: 20px;
   }
   @media (min-width: $desktop-bp) {
     margin-right: 120px;
@@ -87,8 +87,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 40px;
-    gap: 42px;
+    gap: 3%;
   }
   @media (min-width: $desktop-bp) {
     gap: 43px;
@@ -147,16 +146,12 @@
       }
     }
 
-
-
-
     & a {
-      gap: 42px;
       font-weight: 700;
       font-size: 16px;
       line-height: 18px;
       color: #8D81AC;
-      padding: 0 5px;
+      padding: 0;
     }
   }
   @media (min-width: $desktop-bp) {
@@ -321,16 +316,11 @@
 
 .top-img__button-wrapper {
   position: absolute;
-  top: 96%;
-  left: 11%;
   text-align: center;
   @media (min-width: $tablet-bp) {
-    top: 94%;
-    left: 24%;
+
   }
   @media (min-width: $desktop-bp) {
-    top: 95%;
-    left: 30%;
   }
 }
 
