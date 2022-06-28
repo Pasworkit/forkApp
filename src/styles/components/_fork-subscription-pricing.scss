@@ -11,26 +11,22 @@
 
 
 .fork-subscription-pricing__title {
+    @include font(700, 28, 42);
     padding: 14px 15px 0;
     margin-bottom: 32px;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 42px;
     text-align: center;
-    color: #FFFFFF;
+    color: $color-light;
 
     @media (min-width: $tablet-bp) {
         padding-top: 88px;
         margin-bottom: 39px;
-        font-size: 42px;
-        line-height: 44px;
+        @include font(700, 42, 44);
     }
 
     @media (min-width: $desktop-bp) {
+        @include font(700, 48, 50);
         padding-top: 112px;
         margin-bottom: 61px;
-        font-size: 48px;
-        line-height: 50px;
     }
 
 }
@@ -61,15 +57,14 @@
 }
 
 .fork-subscription-pricing__item-title {
+    @include font(400, 24, 24);
     width: 257px;
     padding-top: 36px;
     padding-bottom: 36px;
     background: rgba(255, 255, 255, 0.06);
-    font-size: 24px;
-    line-height: 24px;
     text-transform: uppercase;
     text-align: center;
-    color: #FFFFFF;
+    color: $color-light;
     &-large {
         width: 298px; 
         background: rgba(0, 0, 0, 0.11); 
@@ -81,30 +76,27 @@
 
 
 .fork-subscription-pricing__item-price {
+    @include font(400, 60, 62);
     padding-top: 30px;
     margin-bottom: 20px;
-    font-size: 60px;
-    line-height: 62px;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: $color-light;
 
     &-large {
+        @include font(400, 82, 90);
         padding-top: 14px;
         margin-bottom: 16px;
-        font-size: 82px;
-        line-height: 90px;
     }
 }
 
 .fork-subscription-pricing__item-period {
+    @include font(400, 14, 16);
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 36px;
-    font-size: 14px;
-    line-height: 16px;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: $color-light;
 
     &-large {
         margin-bottom: 46px;
@@ -121,16 +113,14 @@
 }
 
 .fork-subscription-pricing__item-license {
-    font-size: 16px;
-    line-height: 18px;
-    color: #FFFFFF;
+    @include font(400, 16, 18);
+    color: $color-light;
 }
 
 .fork-subscription-pricing__item-support {
+    @include font(400, 16, 18);
     margin-bottom: 37px;
-    font-size: 16px;
-    line-height: 18px;
-    color: #FFFFFF;
+    color: $color-light;
 
     &-large {
         margin-bottom: 83px;
@@ -139,14 +129,13 @@
 }
 
 .fork-subscription-pricing__item-btn{
+    @include font(400, 15, 15);
     padding: 19px 48px;
     background: rgba(255, 255, 255, 0.15);
     border: none;
     border-radius: 15px;
-    font-size: 15px;
-    line-height: 15px;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: $color-light;
     cursor: pointer;
 }
 

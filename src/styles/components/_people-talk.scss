@@ -17,25 +17,20 @@
 
 
 .people-talk__title {
+  @include font(700, 36, 48);
   text-align: center;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 48px;
-  color: #FFFFFF;
+  color: $color-light;
   padding-top: 57px;
   margin-bottom: 50px;
   @media (min-width: $tablet-bp) {
+    @include font(700, 42, 44);
     padding-top: 87px;
     margin-bottom: 83px;
-    font-size: 42px;
-    line-height: 44px;
-
   }
   @media (min-width: $desktop-bp) {
+    @include font(700, 48, 50);
     padding-top: 108px;
     margin-bottom: 75px;
-    font-size: 48px;
-    line-height: 50px;
   }
 }
 
@@ -71,18 +66,14 @@
 }
 
 .people-talk__item-text {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-  color: #FFFFFF;
+  @include font(700, 16, 24);
+  color: $color-light;
 }
 
 .people-talk__text {
+  @include font(400, 14, 21);
   text-align: center;
   margin: 0 auto;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
   color: #A291A5;
   padding-bottom: 20px;
   border-bottom: 2px solid #645766;
