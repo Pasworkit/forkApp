@@ -28,11 +28,9 @@
 }
 
 .here-is-what-you-get__title {
+    @include font(700, 32, 38);
     margin-bottom: 36px;
     padding-top: 50px;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 38px;
     text-align: center;
     color: $accent-color;
     grid-area: title;
@@ -46,8 +44,7 @@
     }
 
     @media (min-width: $tablet-bp) {
-        font-size: 42px;
-        line-height: 44px;
+        @include font(700, 42, 44);
     }
 
     @media (min-width: $desktop-bp) {
@@ -86,22 +83,22 @@
 }
 
 .here-is-what-you-get__item-title {
+    @include font(400, 16, 16);
     margin-bottom: 14px;
-    @include fontSizeL;
     text-align: center;
     color: #323232;
 
     @media (min-width: $tablet-bp) {
         text-align: left;
+        @include font(400, 16, 21);
     }
 }
 
 .here-is-what-you-get__item-text {
+    @include font(400, 14, 21);
     margin-bottom: 38px;
-    font-size: 14px;
-    line-height: 21px;
     text-align: center;
-    color: #848E97;
+    color: $accent-secondary;
 
     @media (min-width: $tablet-bp) {
         text-align: left;

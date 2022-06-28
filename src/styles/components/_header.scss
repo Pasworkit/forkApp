@@ -73,10 +73,8 @@
 
   @media (min-width: $tablet-bp) {
     display: block;
+    @include font(700, 24, 16);
     margin-left: 17px;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 16px;
     color: $accent-color;
   }
 }
@@ -109,12 +107,10 @@
   margin-bottom: 3px;
 
   a {
+    @include font(400, 26, 26);
     display: block;
     padding: 29px 50px 29px 35px;
-    font-weight: 400;
-    font-size: 26px;
-    line-height: 26px;
-    color: #FFFFFF;
+    color: $color-light;
   }
 
   a:active,
@@ -137,6 +133,12 @@
     border-bottom: none;
     padding: 0;
 
+    a {
+      @include font(700, 16, 18);
+      color: $accent-color;
+      padding: 0;
+    }
+
     a:active,
     a:focus {
       color: $accent-color;
@@ -153,13 +155,7 @@
       }
     }
 
-    & a {
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 18px;
-      color: $accent-color;
-      padding: 0;
-    }
+
   }
 
   @media (min-width: $desktop-bp) {
@@ -168,7 +164,7 @@
     pointer-events: auto;
 
     a {
-      line-height: 17px;
+      @include font(700, 16, 17);
     }
 
     & a {
@@ -176,7 +172,7 @@
     }
 
     & a:hover {
-      color: #FFFFFF;
+      color: $color-light;
     }
   }
 }
@@ -190,10 +186,8 @@
 
   & a {
     display: block;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 15px;
-    color: #FFFFFF;
+    @include font(700, 15, 15);
+    color: $color-light;
     padding: 11px 10px;
   }
 
@@ -268,22 +262,18 @@
 
 .top-img__title {
   text-align: center;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 48px;
-  color: #FFFFFF;
+  @include font(700, 48, 48);
+  color: $color-light;
   padding-top: 50px;
   margin-bottom: 19px;
 
   @media (min-width: $tablet-bp) {
-    font-size: 72px;
-    line-height: 72px;
+    @include font(700, 72, 72);
     padding-top: 69px;
   }
 
   @media (min-width: $desktop-bp) {
-    font-size: 82px;
-    line-height: 82px;
+    @include font(700, 82, 82);
     padding-top: 183px;
   }
 }
@@ -293,29 +283,26 @@
 }
 
 .top-img__post-title {
+  @include font(400, 18, 24);
   text-align: center;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
   color: $accent-color;
   margin-bottom: 14px;
   @media (min-width: $tablet-bp) {
-    font-size: 24px;
+    @include font(400, 24, 24);
     margin-bottom: 19px;
   }
   @media (min-width: $desktop-bp) {
-    font-size: 30px;
-    line-height: 30px;
+    @include font(400, 30, 30);
   }
 }
 
 .top-img__text {
   text-align: center;
-  @include fontSize;
+  @include font(400, 14, 14);
   text-transform: uppercase;
-  color: #848E97;
+  color: $accent-secondary;
   @media (min-width: $desktop-bp) {
-    @include fontSizeL;
+    @include font(400, 16, 16);
   }
 }
 
@@ -330,23 +317,20 @@
 
   & a {
     display: block;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 20px;
-    color: #FFFFFF;
+    @include font(700, 18, 20);
+    color: $color-light;
     padding: 13px 29px;
   }
 
   @media (min-width: $tablet-bp) {
     a {
+      @include font(700, 21, 23);
       padding: 23px 61px;
-      font-size: 21px;
-      line-height: 23px;
     }
   }
   @media (min-width: $desktop-bp) {
     &:hover {
-      background: #FFFFFF;
+      background: $color-light;
 
       a {
         color: $accent-color;
@@ -357,10 +341,13 @@
 
 
 .top-img__button-after-text {
-  @include fontSize;
-  color: #848E97;
+  @include font(400, 14, 14);
+  color: $accent-secondary;
   @media (min-width: $tablet-bp) {
-    line-height: 15px;
+    @include font(400, 14, 16);
+  }
+  @media (min-width: $desktop-bp) {
+    @include font(400, 14, 15);
   }
 }
 

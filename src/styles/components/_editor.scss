@@ -17,41 +17,35 @@
 }
 
 .editor__title {
+    @include font(700, 26, 28);
     margin-top: 130px;
     margin-bottom: 27px;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 28px;
     text-align: center;
     text-transform: uppercase;
     color: #635C73;
 
     @media (min-width: $tablet-bp) {
+        @include font(700, 42, 42);
         margin-top: 156px;
         margin-bottom: 33px;
-        font-size: 42px;
-        line-height: 42px;
     }
     
     @media (min-width: $desktop-bp) {
+        @include font(700, 54, 54);
         margin-top: 129px;
         margin-bottom: 35px;
-        font-size: 54px;
-        line-height: 54px;
     }
 }
 
 .editor__text {
+    @include font(400, 14, 20);
     margin-bottom: 36px;
-    font-size: 14px;
-    line-height: 20px;
     text-align: center;
     color: $color-text;
 
     @media (min-width: $tablet-bp) {
+        @include font(400, 21, 32);
         margin-bottom: 24px;
-        font-size: 21px;
-        line-height: 32px;
     }
     
     @media (min-width: $desktop-bp) {
@@ -80,8 +74,8 @@
     padding: 5px;
 
     & span {
+        @include font(400, 14, 14);
         margin-left: 3px;
-        @include fontSize;
         color: $color-text;
     }
 }
@@ -92,7 +86,7 @@
 }
 
 .editor__amount {
-    @include fontSize;
+    @include font(400, 14, 14);
     border: 1px solid #d0d7de;
     border-radius: 20px;
     background: #d0d7de;
