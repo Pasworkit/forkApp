@@ -79,9 +79,7 @@
 }
 
 .here-is-what-you-get__item-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCentre;
     width: 115px;
     height: 85px;
     margin-bottom: 27px;
@@ -89,8 +87,7 @@
 
 .here-is-what-you-get__item-title {
     margin-bottom: 14px;
-    font-size: 16px;
-    line-height: 16px;
+    @include fontSizeL;
     text-align: center;
     color: #323232;
 
@@ -116,8 +113,6 @@
     padding-bottom: 6px;
     height: 381px;
     background: url(../images/hereIsWhatYouGet/image_HereIsWhatYouGet_mobile.png) no-repeat right center;
-    background-repeat: no-repeat;
-
     @media (min-width: $tablet-bp) {
         height: 519px;
         margin-left: 45px;
