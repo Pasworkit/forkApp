@@ -22,7 +22,7 @@ export const buildStyles = () => gulp.src('./src/styles/**/*.scss')
     .pipe(concat('css.min.css'))
     .pipe(gulp.dest('./dist/css'));
 
-export const html = () => gulp.src('./src/**/*.html')
+export const html = () => gulp.src('./**/*.html')
     .pipe(htmlMin({collapseWhitespace: true}))
     .pipe(gulp.dest('./dist'));
 
