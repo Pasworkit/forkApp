@@ -76,12 +76,23 @@
   margin: 0 auto;
   color: #A291A5;
   padding-bottom: 20px;
-  border-bottom: 2px solid #645766;
   @media (min-width: $tablet-bp) {
     max-width: 704px;
   }
   @media (min-width: $desktop-bp) {
     max-width: 887px;
-
   }
+}
+.people-talk__line{
+  text-align: center;
+  width: 245px;
+  height: 2px;
+  background: #645766;
+  @media (min-width: $tablet-bp) {
+    width: 555px;
+  }
+  @media (min-width: $desktop-bp) {
+    max-width: 887px;
+  }
+  max-width:780px;
 }

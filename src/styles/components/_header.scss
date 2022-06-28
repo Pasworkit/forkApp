@@ -10,6 +10,10 @@
   }
 }
 
+.header__relative {
+  position: relative;
+}
+
 .header__navigation {
   display: flex;
   justify-content: space-around;
@@ -30,6 +34,8 @@
     display: flex;
     padding: 0;
     position: absolute;
+    right: 0;
+    left: 0;
     z-index: 2;
     margin: 20px 0 0;
   }
@@ -45,7 +51,7 @@
   }
 
   @media (min-width: $desktop-bp) {
-    margin-right: 120px;
+    margin-right: 49px;
 
     &:hover {
 
@@ -96,7 +102,6 @@
 
   @media (min-width: $desktop-bp) {
     gap: 43px;
-    margin-right: 80px;
     margin-left: 31px;
   }
 }
@@ -202,8 +207,6 @@
   }
 
   @media (min-width: $desktop-bp) {
-    margin-right: 10px;
-
     &:hover {
       background: white;
 
