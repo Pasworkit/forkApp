@@ -10,9 +10,6 @@
   @media (min-width: $tablet-bp) {
     background-image: url("./../images/peopleTalk/background-t.png");
   }
-  @media (min-width: $desktop-bp) {
-    background-image: url("./../images/peopleTalk/background-d.png");
-  }
 }
 
 
@@ -49,7 +46,7 @@
   @media (min-width: $desktop-bp) {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 87px;
-    row-gap: 116px;
+    row-gap: 90px;
     margin-bottom: 118px;
   }
 }
@@ -84,15 +81,16 @@
   }
 }
 .people-talk__line{
-  text-align: center;
-  width: 245px;
+  max-width: 245px;
+  margin: 0 auto;
+  border: none;
   height: 2px;
   background: #645766;
+
   @media (min-width: $tablet-bp) {
-    width: 555px;
+    max-width: 555px;
   }
   @media (min-width: $desktop-bp) {
-    max-width: 887px;
+    max-width: 880px;
   }
-  max-width:780px;
 }
