@@ -60,11 +60,9 @@
 }
 
 .editor__statistics {
-    display: flex;
+    @include flexCentre;
     flex-wrap: wrap;
     gap: 12px;
-    align-items: center;
-    justify-content: center;
     margin-bottom: 70px;
 }
 
@@ -83,8 +81,7 @@
 
     & span {
         margin-left: 3px;
-        font-size: 14px;
-        line-height: 14px;
+        @include fontSize;
         color: $color-text;
     }
 }
@@ -95,13 +92,12 @@
 }
 
 .editor__amount {
+    @include fontSize;
     border: 1px solid #d0d7de;
     border-radius: 20px;
     background: #d0d7de;
     padding: 2px;
     margin: 3px;
-    font-size: 14px;
-    line-height: 14px;
     color: $color-text;
 }
 
