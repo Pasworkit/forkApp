@@ -1,4 +1,4 @@
-<h1>Hi there</h1> 
+<h1>Hi there 👋🇺🇦 !</h1> 
 
 <h3>Developers: Oleksandr Paryshkura, Evgen Yaloza.</h3>
 
